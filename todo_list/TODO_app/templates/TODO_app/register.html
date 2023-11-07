@@ -1,0 +1,28 @@
+{% extends "TODO_app/main.html" %}
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'login' %}"><h1>Register</h1></a>
+</div>
+
+<div class="form-body">
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <label for="">{{ form.username.label}}</label>
+        {{ form.username}}
+
+        <label for="">{{ form.password1.label}}</label>
+        {{ form.password1}}
+
+        <label for="">{{ form.password2.label}}</label>
+        {{ form.password2}}
+    
+        <input class="button" style="margin-top: 10px;" type="submit" value="Register">
+    </form>
+    <p>You have an already an account <a href="{% url 'login' %}">Login</a></p>
+</div>
+
+
+
+{% endblock content %}

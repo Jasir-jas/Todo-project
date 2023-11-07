@@ -1,0 +1,18 @@
+{% extends "TODO_app/main.html" %}
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'task-list' %}">&#8592;Go Back</a>
+</div>
+
+
+<div class="form-body">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>Are you want to sure Delete task?</p>
+        <input class="button" type="submit" value="Delete">
+    </form>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "TODO_app/main.html" %}
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'task-list' %}">&#8592;Back</a>
+</div>
+
+
+<div class="form-body">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="button" type="Submit" value="Submit">
+    </form>
+</div>
+
+
+{% endblock content %}
